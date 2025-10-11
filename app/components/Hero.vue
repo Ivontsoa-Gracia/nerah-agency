@@ -1,35 +1,35 @@
 <template>
   <section
-    class="relative min-h-screen flex items-center overflow-hidden pt-32 bg-[#131629] text-white"
-    
+    class="relative min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 bg-[#131629] text-white"
   >
     <div class="absolute inset-0 z-0 bg-grid opacity-20"></div>
 
     <div
-      class="container mx-auto px-6 flex flex-col lg:flex-row items-center justify-between relative z-10 pt-8 pb-20"
+      class="container mx-auto px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row items-center justify-between relative z-10 pb-16 sm:pb-20"
     >
-      <div class="lg:w-1/2 mb-16 lg:mb-0 fade-in">
+      <div class="w-full lg:w-1/2 mb-12 lg:mb-0 text-center lg:text-left fade-in">
         <h1
-          class="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 leading-tight"
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
         >
           <span class="text-title">DU CONCEPT À L’IMPACT</span><br />
         </h1>
-        <p class="text-md md:text-lg text-default mb-10 max-w-lg font-thin">
-          Transformez vos idées en expériences innovantes grâce à notre
-          expertise technologique et créative.
+        <p
+          class="text-sm sm:text-base md:text-lg text-default mb-8 sm:mb-10 max-w-md sm:max-w-lg mx-auto lg:mx-0 font-thin"
+        >
+          Transformez vos idées en expériences innovantes grâce à notre expertise technologique et créative.
         </p>
         <a
           href="#services"
-          class="inline-block px-6 py-2 text-default  border border-[#e0e5ea] transition duration-300 text-lg font-thin"
+          class="inline-block px-5 sm:px-6 py-2 sm:py-3 text-default border border-[#e0e5ea] transition duration-300 text-base sm:text-lg font-thin hover:bg-[#e0e5ea]/10"
         >
           Découvrir nos services
         </a>
       </div>
 
-      <div class="lg:w-1/2 relative flex items-center justify-center h-80">
+      <div class="hidden md:flex lg:w-1/2 relative items-center justify-center h-72 md:h-80">
         <div
           id="carousel"
-          class="flex items-center justify-center space-x-4 w-full relative"
+          class="flex items-center justify-center w-full relative"
         >
           <div
             v-for="(src, i) in visibleImages"
@@ -47,13 +47,13 @@
 
         <button
           @click="prevImage"
-          class="absolute left-0 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-gray-400"
+          class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-gray-400"
         >
           <i class="bx bx-chevron-left"></i>
         </button>
         <button
           @click="nextImage"
-          class="absolute right-0 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-gray-400"
+          class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-gray-400"
         >
           <i class="bx bx-chevron-right"></i>
         </button>
@@ -61,9 +61,9 @@
     </div>
 
     <div
-      class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
+      class="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
     >
-      <a href="#services" class="text-white text-3xl">
+      <a href="#services" class="text-white text-2xl sm:text-3xl">
         <i class="bx bx-chevron-down"></i>
       </a>
     </div>
