@@ -1,23 +1,23 @@
 <template>
   <section
     id="contact"
-    class="py-20 px-4 sm:px-8 lg:px-16 bg-[#131629] text-white"
+    class="py-16 px-4 sm:px-8 lg:px-16 bg-[#131629] text-white"
   >
     <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-16 fade-in">
-        <h2
-          class="text-3xl sm:text-4xl md:text-5xl font-bold logo-type text-[#e0e5ea]"
-        >
+      <!-- Header -->
+      <div class="text-center mb-12 fade-in">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold logo-type text-[#e0e5ea]">
           CONTACTEZ-NOUS
         </h2>
         <div class="mt-2 h-[2px] w-24 bg-secondary mx-auto"></div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div
-          class="lg:col-span-2 fade-in rounded-lg p-8 bg-[#1a2030]/50 backdrop-blur-md shadow-lg"
-        >
-          <h3 class="text-2xl font-bold mb-4 text-[#e0e5ea]">
+      <!-- Grid principale -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Formulaire -->
+        <div class="lg:col-span-2 fade-in rounded-sm p-6 sm:p-8">
+          <h3 class="text-2xl font-medium mb-4 text-[#e0e5ea]">
             Envoyez-nous un message
           </h3>
           <p class="text-gray-300 mb-6">
@@ -25,33 +25,35 @@
             technologique ? Contactez-nous pour en discuter !
           </p>
 
-          <form @submit.prevent="sendMessage" class="space-y-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <form @submit.prevent="sendMessage" class="space-y-4 sm:space-y-6">
+            <!-- Nom / Sujet -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 v-model="form.user_name"
                 type="text"
                 placeholder="Votre nom"
-                class="w-full px-4 py-3 rounded-lg bg-[#e0e5ea]/10 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
+                class="w-full px-4 py-3 rounded-sm shadow-lg bg-[#1a2030]/50 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
               />
               <input
                 v-model="form.subject"
                 type="text"
                 placeholder="Sujet"
-                class="w-full px-4 py-3 rounded-lg bg-[#e0e5ea]/10 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
+                class="w-full px-4 py-3 rounded-sm shadow-lg bg-[#1a2030]/50 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
               />
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Email / Phone -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <input
                 v-model="form.user_email"
                 type="email"
                 placeholder="Votre email"
-                class="w-full px-4 py-3 rounded-lg bg-[#e0e5ea]/10 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
+                class="w-full px-4 py-3 rounded-sm shadow-lg bg-[#1a2030]/50 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
               />
               <div class="flex">
                 <select
                   v-model="form.country_code"
-                  class="px-4 py-3 bg-[#e0e5ea]/40 text-white rounded-l-lg focus:outline-none"
+                  class="px-4 py-3 bg-[#1a2030]/60 text-white rounded-l-sm focus:outline-none"
                 >
                   <option
                     v-for="country in countries"
@@ -64,32 +66,33 @@
                 <input
                   v-model="form.phone_number"
                   type="text"
-                  placeholder="Votre numéro de contact"
-                  class="w-full px-4 py-3 bg-[#e0e5ea]/10 backdrop-blur-md text-white rounded-r-lg focus:outline-none focus:ring-2 focus:ring-secondary"
+                  placeholder="Votre numéro"
+                  class="w-full px-4 py-3 shadow-lg bg-[#1a2030]/50 backdrop-blur-md text-white rounded-r-sm focus:outline-none focus:ring-2 focus:ring-secondary"
                 />
               </div>
             </div>
 
+            <!-- Message -->
             <textarea
               v-model="form.message"
               placeholder="Votre message"
               rows="5"
-              class="w-full px-4 py-3 rounded-lg bg-[#e0e5ea]/10 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
+              class="w-full px-4 py-3 rounded-sm shadow-lg bg-[#1a2030]/50 backdrop-blur-md text-white focus:outline-none focus:ring-2 focus:ring-secondary"
             ></textarea>
 
+            <!-- Bouton -->
             <button
               type="submit"
-              class="w-full py-3 text-[#e0e5ea] border border-[#e0e5ea] rounded-full transition hover:bg-[#e0e5ea]/10"
+              class="w-full py-3 text-[#e0e5ea] border border-[#e0e5ea] rounded-sm transition hover:bg-[#1a2030]/50"
             >
               Envoyer le message
             </button>
           </form>
         </div>
 
+        <!-- Coordonnées -->
         <div class="fade-in lg:col-span-1">
-          <div
-            class="bg-[#1a2030]/50 backdrop-blur-md rounded-lg p-8 shadow-lg"
-          >
+          <div class="bg-[#1a2030]/50 backdrop-blur-md rounded-sm p-6 sm:p-8 shadow-lg">
             <h3 class="text-xl font-bold mb-6 text-[#e0e5ea]">
               NOS COORDONNÉES
             </h3>
@@ -111,13 +114,13 @@
               />
             </div>
 
-            <div class="mt-8 texte">
+            <div class="mt-6 texte">
               <div class="flex items-center z-50 space-x-4">
                 <span class="text-[#e0e5ea] text-sm font-normal text-md">
                   SUIVEZ-NOUS
                 </span>
 
-                <div class="h-[2px] w-12 bg-[#e0e5ea]"></div>
+                <div class="h-[2px] w-11 bg-[#e0e5ea]"></div>
 
                 <div class="flex space-x-4">
                   <a
@@ -151,12 +154,15 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
 </template>
+
 
 <script setup>
 import { ref } from "vue";

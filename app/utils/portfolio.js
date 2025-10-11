@@ -32,7 +32,7 @@ export const portfolio = [
     {
       titre: "Interface web & mobile",
       description: "Création de maquettes, prototypes et design responsive.",
-      image: "/img/stylescape.pdf",
+      image: "/img/hero.jpg",
       service: "Design",
       categorie: "UI/UX Design"
     },
