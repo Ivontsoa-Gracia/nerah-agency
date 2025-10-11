@@ -120,4 +120,11 @@ const goToHome = () => {
   transform: translateX(100%);
   opacity: 0;
 }
+
+.logo-type {
+    font-family: "Pirulen", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
+  
 </style>

@@ -49,6 +49,9 @@ onMounted(async () => {
 
 .logo-type {
   letter-spacing: 8px; 
-}
+    font-family: "Pirulen", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
 
 </style>

@@ -147,4 +147,10 @@ const carouselStyle = (i) => {
 .primary-border {
   border: 2px solid white;
 }
+
+.logo-type {
+    font-family: "Pirulen", sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+  }
 </style>
