@@ -1,12 +1,17 @@
 <template>
   <nav
-    class="fixed top-0 left-0 w-full z-50 py-6 px-6 sm:px-12 md:px-16 bg-[#131629] backdrop-blur-lg"
+    class="fixed top-0 left-0 w-full z-50 py-4 px-6 sm:px-12 md:px-16 bg-[#131629] backdrop-blur-lg"
   >
     <div class="flex justify-between items-center">
       <div
         class="text-2xl font-pirulen tracking-widest text-[#e0e5ea] select-none"
       >
-        <span class="logo-type">NERAH</span>
+        <!-- <span class="logo-type hidden">NERAH</span> -->
+        <img
+        src="/nerah_agency_2.png"
+        alt="Nerah Agency"
+        class="h-10 sm:h-10 md:h-12 w-auto object-contain"
+      />
       </div>
 
       <button
