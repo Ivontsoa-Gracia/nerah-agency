@@ -1,156 +1,201 @@
 <template>
   <section
-    class="relative min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden pt-24 sm:pt-28 md:pt-32 bg-[#131629] text-white"
+    class="relative min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden bg-[#131629] text-white"
   >
-    <div class="absolute inset-0 z-0 bg-grid opacity-20"></div>
+    <div class="relative bg-[#131629] w-full overflow-hidden mt-20 sm:mt-0">
+      <div
+        class="relative z-10 container mx-auto px-8 sm:px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center"
+      >
+        <div class="flex flex-col w-full lg:w-1/2 mb-12 lg:mb-0">
+          <div class="flex items-start">
+            <div class="h-64 sm:h-24 w-[3px] bg-[#e0e5ea]"></div>
+            <div class="h-[2px] w-48 bg-[#e0e5ea]"></div>
+            <div class="ml-6 -mt-3 flex flex-col">
+              <h3
+                class="uppercase titre font-light text-[#e0e5ea]/90 text-sm sm:text-base"
+              >
+                Arts des concepts
+              </h3>
+              <h1
+                class="text-5xl sm:text-8xl font-bold leading-tight text-[#e0e5ea] uppercase logo-type"
+              >
+                Futur
+              </h1>
 
-    <div
-      class="container mx-auto px-4 sm:px-6 md:px-8 flex flex-col lg:flex-row items-center justify-between relative z-10 pb-16 sm:pb-20"
-    >
-      <div class="w-full lg:w-1/2 mb-12 lg:mb-0 text-center lg:text-left fade-in">
-        <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
-        >
-          <span class="text-title">DU CONCEPT À L’IMPACT</span><br />
-        </h1>
-        <p
-          class="text-sm sm:text-base md:text-lg text-default mb-8 sm:mb-10 max-w-md sm:max-w-lg mx-auto lg:mx-0 font-thin"
-        >
-          Transformez vos idées en expériences innovantes grâce à notre expertise technologique et créative.
-        </p>
-        <a
-          href="#services"
-          class="inline-block px-5 sm:px-6 py-2 sm:py-3 text-default border border-[#e0e5ea] transition duration-300 text-base sm:text-lg font-thin hover:bg-[#e0e5ea]/10"
-        >
-          Découvrir nos services
-        </a>
-      </div>
-
-      <div class="hidden md:flex lg:w-1/2 relative items-center justify-center h-72 md:h-80">
-        <div
-          id="carousel"
-          class="flex items-center justify-center w-full relative"
-        >
-          <div
-            v-for="(src, i) in visibleImages"
-            :key="i"
-            class="absolute overflow-hidden rounded-xl transition-all duration-700 ease-in-out primary-border"
-            :style="carouselStyle(i)"
-          >
-            <img
-              :src="src"
-              class="w-full h-full object-cover cursor-pointer"
-              @click="goToImage(i)"
-            />
+              <p
+                class="text-sm sm:text-base text-[#e0e5ea]/90 leading-relaxed font-light mt-4 max-w-full lg:max-w-[80%]"
+                style="text-align: justify"
+              >
+                Chez Nerah Agency, nous transformons vos concepts en expériences
+                concrètes et mémorables. Grâce à notre expertise technologique
+                et créative, nous accompagnons vos projets du concept initial à
+                la réalisation, en plaçant l’impact au cœur de chaque solution.
+              </p>
+            </div>
           </div>
         </div>
 
-        <button
-          @click="prevImage"
-          class="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-gray-400"
+        <div
+          class="relative hidden lg:block w-1/2 h-[300px] overflow-hidden rounded-l-2xl"
         >
-          <i class="bx bx-chevron-left"></i>
-        </button>
-        <button
-          @click="nextImage"
-          class="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl sm:text-4xl hover:text-gray-400"
-        >
-          <i class="bx bx-chevron-right"></i>
-        </button>
+          <img
+            src="/img/hero_1.jpg"
+            alt="Hero"
+            class="w-full h-full object-cover"
+          />
+
+          <div
+            class="absolute inset-0"
+            style="
+              background: radial-gradient(
+                ellipse 250px 160px at center,
+                rgba(19, 22, 41, 0.1) 0%,
+                rgba(19, 22, 41, 0.1) 30%,
+                rgba(19, 22, 41, 0.85) 75%,
+                rgba(19, 22, 41, 1) 100%
+              );
+            "
+          ></div>
+        </div>
       </div>
     </div>
 
     <div
-      class="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-50"
+      class="absolute bottom-8 inset-x-0 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 z-50 gap-4 lg:gap-0"
     >
-      <a href="#services" class="text-white text-2xl sm:text-3xl">
-        <i class="bx bx-chevron-down"></i>
-      </a>
+      <div class="hidden sm:flex items-center z-50 space-x-4">
+        <span class="text-[#e0e5ea] text-sm font-normal text-md text-default">
+          SUIVEZ-NOUS
+        </span>
+
+        <div class="h-[2px] w-11 bg-[#e0e5ea]"></div>
+
+        <div class="flex space-x-4">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+          >
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+          >
+            <i class="bx bxl-linkedin"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+          >
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+          >
+            <i class="bx bxl-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <a
+          href="#services"
+          class="text-white text-3xl hover:text-[#ffffff] animate-bounce"
+        >
+          <i class="bx bx-chevron-down"></i>
+        </a>
+      </div>
+
+      <div class="flex">
+        <div
+          class="uppercase text-[#e0e5ea] logo-type text-sm font-normal hidden sm:block flex"
+        >
+          Du concept à l'impact
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { ref, onMounted } from "vue";
+import lottie from "lottie-web";
 
-const images = [
-  "/img/image1.jpeg",
-  "/img/image2.jpeg",
-  "/img/image3.jpeg",
-  "/img/image4.jpeg",
-  "/img/image5.jpeg",
-  "/img/image6.jpeg",
-  "/img/image7.jpeg",
-  "/img/image8.jpeg",
-  "/img/image9.jpeg",
-  "/img/image10.jpeg",
-];
+const animationContainer = ref(null);
 
-const currentIndex = ref(0);
+onMounted(async () => {
+  const animationData = (await import("~/utils/nerah_hero.json")).default;
 
-const visibleImages = computed(() => {
-  const arr = [];
-  for (let i = 0; i < 5; i++) {
-    arr.push(images[(currentIndex.value + i) % images.length]);
-  }
-  return arr;
+  if (!animationContainer.value) return;
+
+  const animation = lottie.loadAnimation({
+    container: animationContainer.value,
+    renderer: "svg",
+    loop: false,
+    autoplay: true,
+    animationData,
+  });
 });
-
-const prevImage = () => {
-  currentIndex.value = (currentIndex.value + 1) % images.length;
-};
-const nextImage = () => {
-  currentIndex.value = (currentIndex.value - 1 + images.length) % images.length;
-};
-
-const goToImage = (i) => {
-  currentIndex.value =
-    (currentIndex.value + i - 2 + images.length) % images.length;
-};
-
-const carouselStyle = (i) => {
-  switch (i) {
-    case 0:
-      return "left:10%; width:140px; height:240px; z-index:1; filter: blur(1px) brightness(0.5);";
-    case 1:
-      return "left:18%; width:200px; height:300px; z-index:2; filter: blur(1px) brightness(0.7);";
-    case 2:
-      return "left:50%; top:50%; transform:translate(-50%,-50%); width:260px; height:360px; z-index:5;";
-    case 3:
-      return "right:18%; width:200px; height:300px; z-index:2; filter: blur(1px) brightness(0.7);";
-    case 4:
-      return "right:10%; width:140px; height:240px; z-index:1; filter: blur(1px) brightness(0.5);";
-    default:
-      return "";
-  }
-};
 </script>
-
 <style scoped>
-.text-title {
-  font-family: "Pirulen", sans-serif;
-  letter-spacing: 2px;
-  font-weight: bolder;
-  color: #e0e5ea;
-
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      hsla(207, 18%, 90%, 0.022) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, hsla(207, 18%, 90%, 0.022) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
+
+.animate-pulse-slow {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
 .text-default {
   color: #e0e5ea;
   letter-spacing: 1px;
   font-family: "Helvetica", sans-serif;
 }
-.bg-grid {
-  background-image: linear-gradient(to right, hsla(207, 18%, 90%, 0.022) 1px, transparent 1px),
-    linear-gradient(to bottom, hsla(207, 18%, 90%, 0.022) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-.primary-border {
-  border: 2px solid white;
+.logo-type {
+  font-family: "Pirulen", sans-serif;
+  letter-spacing: 2px;
+  font-weight: normal;
 }
 
-.logo-type {
-    font-family: "Pirulen", sans-serif;
-    letter-spacing: 2px;
-    font-weight: normal;
-  }
+.titre {
+  letter-spacing: 1px;
+  font-family: "Helvetica", sans-serif;
+  letter-spacing: 10px;
+}
 </style>

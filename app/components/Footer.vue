@@ -6,7 +6,7 @@
       </div>
 
       <!-- Liens rapides -->
-      <div class="flex flex-col items-center md:items-start space-y-4">
+      <div class="hidden md:flex flex-col items-center md:items-start space-y-4">
         <h4 class="font-semibold text-lg">Liens rapides</h4>
         <ul class="space-y-2 text-center md:text-left">
           <li>
@@ -32,22 +32,22 @@
         </ul>
       </div>
 
-      <div class="flex flex-col items-center md:items-start space-y-4">
-        <h4 class="font-semibold text-lg">Newsletter</h4>
-        <div class="flex w-[70%] mb-4">
+      <div class="flex flex-col items-center md:items-start space-y-4 -mt-12 sm:mt-1">
+        <h4 class="font-semibold text-lg hidden md:flex">Newsletter</h4>
+        <div class="flex w-[70%] mb-4 hidden md:flex">
           <input
             type="email"
             placeholder="Votre email"
-            class="px-4 py-2 rounded-l-lg border border-gray-300 bg-[#131629]/10 focus:outline-none w-full"
+            class="px-4 py-2 rounded-l-sm border border-gray-300 bg-[#131629]/10 focus:outline-none w-full"
           />
           <button
-            class="bg-[#131629] border border-gray-300 rounded-r-lg px-4 flex items-center justify-center hover:bg-[#131629]/30 transition"
+            class="bg-[#131629] border border-gray-300 rounded-r-sm px-4 flex items-center justify-center hover:bg-[#131629]/30 transition"
           >
             <i class="fas fa-paper-plane text-[#e0e5ea]"></i>
           </button>
         </div>
 
-        <span class="text-[#131629] text-sm font-normal">SUIVEZ-NOUS</span>
+        <span class="text-[#131629] text-sm font-normal ">SUIVEZ-NOUS</span>
         <div class="h-[2px] w-12 bg-[#131629] mb-2"></div>
         <div class="flex space-x-4">
           <a
@@ -82,7 +82,7 @@
       </div>
     </div>
 
-    <div class="mt-12 text-center text-[#131629]/80 text-sm">
+    <div class="mt-12 text-center text-[#131629]/80 text-sm px-12 sm:p-1">
       &copy; 2025 Nerah Agency. Tous droits réservés.
     </div>
   </footer>

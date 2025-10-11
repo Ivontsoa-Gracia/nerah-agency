@@ -6,6 +6,33 @@
 
 <script setup lang="ts">
 useHead({
+  title: "Nerah Agency – Développement Web, Design et Marketing à Madagascar",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication.",
+    },
+    {
+      name: "keywords",
+      content:
+        "Nerah Agency, agence web Madagascar, développement site web, design UI/UX, marketing digital, communication",
+    },
+    { name: "robots", content: "index, follow" },
+
+    // Open Graph pour réseaux sociaux
+    { property: "og:title", content: "Nerah Agency - Développement Web, Design et Marketing à Madagascar" },
+    { property: "og:description", content: "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication." },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: "https://nerah-agency.vercel.app/" },
+    { property: "og:image", content: "https://nerah-agency.vercel.app/logo.png" },
+
+    // Twitter Card
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: "Nerah Agency – Développement Web, Design et Marketing à Madagascar" },
+    { name: "twitter:description", content: "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication." },
+    { name: "twitter:image", content: "https://nerah-agency.vercel.app/logo.png" },
+  ],
   link: [
     {
       rel: "stylesheet",
@@ -23,7 +50,6 @@ useHead({
       rel: "stylesheet",
       href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css",
     },
-
     {
       rel: "preload",
       as: "font",
@@ -50,6 +76,7 @@ useHead({
 });
 </script>
 
+
 <style>
 @font-face {
   font-family: "Pirulen";
@@ -71,10 +98,10 @@ useHead({
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 0px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #d0d0d0;
+  background-color: #e0e5ea;
   border-radius: 10px;
 }
 </style>

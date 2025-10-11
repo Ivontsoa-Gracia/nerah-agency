@@ -6,28 +6,21 @@
       <div
         class="text-2xl font-pirulen tracking-widest text-[#e0e5ea] select-none"
       >
-        <!-- <span class="logo-type hidden">NERAH</span> -->
         <img
-        src="/nerah_agency_2.png"
-        alt="Nerah Agency"
-        class="h-10 sm:h-10 md:h-12 w-auto object-contain"
-      />
+          src="/nerah_agency_2.png"
+          alt="Nerah Agency"
+          class="h-10 sm:h-10 md:h-12 w-auto object-contain"
+        />
       </div>
 
       <button
         @click="toggleMenu"
-        class="relative w-8 h-6 flex flex-col justify-between items-start pl-[2px] group z-[60]"
+        class="relative w-8 h-3 flex flex-col justify-between items-start pl-[2px] group z-[60]"
       >
         <span
           :class="[
-            'block h-[2px] w-[50%] bg-[#e0e5ea] rounded transition-all duration-300 origin-left',
-            isOpen ? 'rotate-45 translate-y-[2px]  w-[50%]' : '',
-          ]"
-        ></span>
-        <span
-          :class="[
-            'block h-[2px] w-full bg-[#e0e5ea] rounded transition-all duration-300 origin-left',
-            isOpen ? 'opacity-0' : '',
+            'block h-[2px] w-[100%] bg-[#e0e5ea] rounded transition-all duration-300 origin-left',
+            isOpen ? 'rotate-45 -translate-y-[9px]  w-[50%]' : '',
           ]"
         ></span>
         <span
@@ -50,23 +43,30 @@
           <button @click="goToHome" class="hover:text-[#e0e5ea]/70 transition">
             Acceuil
           </button>
-
           <button
             @click="goToServices"
             class="hover:text-[#e0e5ea]/70 transition"
           >
             Services
           </button>
-
-          <a href="#portfolio" class="hover:text-[#e0e5ea]/70 transition"
-            >Portfolio</a
+          <button
+            @click="goToPortfolios"
+            class="hover:text-[#e0e5ea]/70 transition"
           >
+            Portfolio
+          </button>
           <a href="#about" class="hover:text-[#e0e5ea]/70 transition"
             >À propos</a
           >
           <a href="#contact" class="hover:text-[#e0e5ea]/70 transition"
             >Contact</a
           >
+          <button
+            @click="restart"
+            class="hover:text-[#e0e5ea]/70 transition"
+          >
+            Redemarer
+          </button>
         </div>
       </div>
     </transition>
@@ -85,6 +85,14 @@ const goToServices = () => {
 };
 
 const goToHome = () => {
+  navigateTo("/main");
+};
+
+const goToPortfolios = () => {
+  navigateTo("/portfolio");
+};
+
+const restart = () => {
   navigateTo("/");
 };
 </script>

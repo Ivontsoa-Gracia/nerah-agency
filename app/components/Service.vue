@@ -12,7 +12,7 @@
           <template v-for="(service, sIndex) in services" :key="sIndex">
             <template v-for="(type, tIndex) in service.types" :key="tIndex">
               <span
-                class="bg-[#131629] text-white px-6 py-2 rounded-full text-sm font-medium whitespace-nowrap shadow hover:bg-[#22263d] transition"
+                class="bg-[#131629] text-white px-6 py-2 rounded-sm text-sm font-medium whitespace-nowrap shadow hover:bg-[#22263d] transition"
               >
                 {{ type.categorie }}
               </span>
@@ -37,11 +37,11 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 texte">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 texte ">
         <div
           v-for="service in services"
           :key="service.titre"
-          class="group bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center border border-gray-300"
+          class="group bg-white/10 backdrop-blur-md p-8 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center text-center border border-gray-300 cursor-pointer"
         >
           <div
             class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-[#131629] text-white text-4xl group-hover:scale-110 transition-transform duration-300"
@@ -56,7 +56,7 @@
         </div>
 
         <div
-          class="group bg-[#131629] text-white rounded-2xl p-8 shadow-lg flex flex-col items-center justify-center text-center border border-[#131629]/40 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
+          class="group bg-[#131629] text-white p-8 shadow-sm flex flex-col items-center justify-center text-center border border-[#131629]/40 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer"
         >
           <h3 class="text-xl font-normal mb-3">Et bien plus encore</h3>
           <p class="text-gray-300 text-sm leading-relaxed mb-6 max-w-xs">
@@ -65,7 +65,7 @@
           </p>
           <button
             @click="goToServices"
-            class="px-6 py-2 border border-[#e0e5ea] text-[#e0e5ea] rounded-full font-normal transition-colors duration-300"
+            class="px-6 py-2 border border-[#e0e5ea] text-[#e0e5ea] font-normal transition-colors duration-300"
           >
             Voir plus
           </button>
@@ -108,4 +108,11 @@ const goToServices = () => {
   letter-spacing: 1px;
   font-family: "Helvetica", sans-serif;
 }
+
+.cursor-pointer {
+    transition: all 0.3s ease;
+  }
+  .cursor-pointer:hover {
+    transform: scale(1.03);
+  }
 </style>
