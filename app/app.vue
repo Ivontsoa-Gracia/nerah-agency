@@ -35,8 +35,8 @@ useHead({
 
 @font-face {
   font-family: "Helvetica";
-  src: url("//font/HelveticaNeueRoman.woff2") format("woff2"),
-    url("//font/HelveticaNeueRoman.otf") format("opentype");
+  src: url("/font/HelveticaNeueRoman.woff2") format("woff2"),
+    url("/font/HelveticaNeueRoman.otf") format("opentype");
 }
 ::-webkit-scrollbar {
   width: 6px;
