@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed top-0 left-0 w-full z-50 py-6 px-16 bg-[#131629] backdrop-blur-lg"
+    class="fixed top-0 left-0 w-full z-50 py-6 px-6 sm:px-12 md:px-16 bg-[#131629] backdrop-blur-lg"
   >
     <div class="flex justify-between items-center">
       <div
@@ -122,9 +122,8 @@ const goToHome = () => {
 }
 
 .logo-type {
-    font-family: "Pirulen", sans-serif;
-    letter-spacing: 2px;
-    font-weight: normal;
-  }
-  
+  font-family: "Pirulen", sans-serif;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
 </style>
