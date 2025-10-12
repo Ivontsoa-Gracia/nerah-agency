@@ -33,62 +33,63 @@
     </div>
 
     <transition name="slide-right">
-    <div
-      v-if="isOpen"
-      class="fixed top-0 right-0 h-screen w-[220px] bg-[#131629]/95 backdrop-blur-xl border-l border-[#e0e5ea]/10 shadow-lg z-50 animate-slide-right text-default"
-    >
-      <div class="flex flex-col justify-center items-start h-full space-y-6 px-6">
-        <!-- Menu items avec icône -->
-        <button
-          @click="goToHome"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+      <div
+        v-if="isOpen"
+        class="fixed top-0 right-0 h-screen w-[220px] bg-[#131629]/95 backdrop-blur-5l border-l border-[#e0e5ea]/10 shadow-lg z-50 animate-slide-right text-default"
+      >
+        <div
+          class="flex flex-col justify-center items-start h-full space-y-6 px-6"
         >
-          <i class="bx bx-home-alt text-xl"></i>
-          Accueil
-        </button>
+          <button
+            @click="goToHome"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-home-alt text-xl"></i>
+            Accueil
+          </button>
 
-        <a
-          href="#about"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-user text-xl"></i>
-          À propos
-        </a>
+          <a
+            href="#about"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-user text-xl"></i>
+            À propos
+          </a>
 
-        <button
-          @click="goToServices"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-briefcase-alt-2 text-xl"></i>
-          Services
-        </button>
+          <button
+            @click="goToServices"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-briefcase-alt-2 text-xl"></i>
+            Services
+          </button>
 
-        <button
-          @click="goToPortfolios"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-image text-xl"></i>
-          Réalisations
-        </button>
+          <button
+            @click="goToPortfolios"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-image text-xl"></i>
+            Réalisations
+          </button>
 
-        <a
-          href="#contact"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-envelope text-xl"></i>
-          Contact
-        </a>
+          <a
+            href="#contact"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-envelope text-xl"></i>
+            Contact
+          </a>
 
-        <button
-          @click="restart"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-refresh text-xl"></i>
-          Redémarrer
-        </button>
+          <button
+            @click="restart"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+          >
+            <i class="bx bx-refresh text-xl"></i>
+            Redémarrer
+          </button>
+        </div>
       </div>
-    </div>
-  </transition>
+    </transition>
   </nav>
 </template>
 

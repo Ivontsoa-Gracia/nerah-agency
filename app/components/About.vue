@@ -56,17 +56,17 @@
             v-for="(item, index) in propos"
             :key="index"
             :class="[
-              'rounded-sm p-6 transition-all duration-300 h-auto max-h-[200px]',
+              'rounded-sm p-6 transition-all duration-300 h-auto min-h-[200px]',
               index === 0
-                ? 'bg-transparent shadow-none'
+                ? 'bg-[#131629] sm:bg-transparent shadow-none'
                 : 'bg-[#131629] text-[#e0e5ea]',
             ]"
             data-aos="fade-up"
           >
             <h3
               :class="[
-                'text-2xl sm:text-2xl font-semibold mb-8',
-                index === 0 ? 'text-[#131629]' : 'text-[#e0e5ea]',
+                'text-3xl sm:text-2xl font-bold mb-8 tracking-wider',
+                index === 0 ? 'text-[#e0e5ea] sm:text-[#131629]' : 'text-[#e0e5ea]',
               ]"
             >
               {{ item.title }}
@@ -74,7 +74,7 @@
             <p
               :class="[
                 'text-sm leading-relaxed',
-                index === 0 ? 'text-[#131629]' : 'text-gray-300',
+                index === 0 ? 'text-[#e0e5ea] sm:text-[#131629]' : 'text-gray-300',
               ]"
             >
               {{ item.details }}

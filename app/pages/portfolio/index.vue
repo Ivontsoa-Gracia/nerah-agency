@@ -59,7 +59,7 @@
             <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 logo-type">
               {{ proj.titre }}
             </h3>
-            <p class="text-gray-200 text-xs sm:text-sm">
+            <p class="text-gray-200 text-xs sm:text-sm texte">
               {{ proj.description }}
             </p>
           </div>
