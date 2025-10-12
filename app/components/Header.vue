@@ -47,6 +47,14 @@
           Accueil
         </button>
 
+        <a
+          href="#about"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-user text-xl"></i>
+          À propos
+        </a>
+
         <button
           @click="goToServices"
           class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
@@ -62,14 +70,6 @@
           <i class="bx bx-image text-xl"></i>
           Réalisations
         </button>
-
-        <a
-          href="#about"
-          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
-        >
-          <i class="bx bx-user text-xl"></i>
-          À propos
-        </a>
 
         <a
           href="#contact"

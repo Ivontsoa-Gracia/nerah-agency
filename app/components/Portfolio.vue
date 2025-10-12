@@ -7,7 +7,7 @@
         </h2>
         <button
           @click="goToPortfolio"
-          class="px-6 py-2 text-[#131629] texte transition flex items-center gap-2 hover:underline"
+          class="text-[#131629] texte transition flex items-center gap-2 hover:underline"
           data-aos="fade-up"
         >
           Voir plus de projets
