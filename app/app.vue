@@ -5,6 +5,19 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+onMounted(() => {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-out-cubic",
+    once: true,
+    mirror: false,
+  });
+});
+
 useHead({
   title: "Nerah Agency – Développement Web, Design et Marketing à Madagascar",
   meta: [
@@ -21,17 +34,39 @@ useHead({
     { name: "robots", content: "index, follow" },
 
     // Open Graph pour réseaux sociaux
-    { property: "og:title", content: "Nerah Agency - Développement Web, Design et Marketing à Madagascar" },
-    { property: "og:description", content: "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication." },
+    {
+      property: "og:title",
+      content:
+        "Nerah Agency - Développement Web, Design et Marketing à Madagascar",
+    },
+    {
+      property: "og:description",
+      content:
+        "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication.",
+    },
     { property: "og:type", content: "website" },
     { property: "og:url", content: "https://nerah-agency.vercel.app/" },
-    { property: "og:image", content: "https://nerah-agency.vercel.app/logo.png" },
+    {
+      property: "og:image",
+      content: "https://nerah-agency.vercel.app/logo.png",
+    },
 
     // Twitter Card
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: "Nerah Agency – Développement Web, Design et Marketing à Madagascar" },
-    { name: "twitter:description", content: "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication." },
-    { name: "twitter:image", content: "https://nerah-agency.vercel.app/logo.png" },
+    {
+      name: "twitter:title",
+      content:
+        "Nerah Agency – Développement Web, Design et Marketing à Madagascar",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Nerah Agency, votre partenaire à Madagascar pour le développement web, design UI/UX, marketing digital et communication.",
+    },
+    {
+      name: "twitter:image",
+      content: "https://nerah-agency.vercel.app/logo.png",
+    },
   ],
   link: [
     {
@@ -76,7 +111,6 @@ useHead({
 });
 </script>
 
-
 <style>
 @font-face {
   font-family: "Pirulen";
@@ -95,6 +129,9 @@ useHead({
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {

@@ -4,23 +4,39 @@
       <h1
         class="text-3xl sm:text-3xl font-bold text-[#222831] mb-8 text-center"
       >
-        Portfolio
+        Nos réalisations
       </h1>
 
-      <div class="flex flex-wrap gap-2 sm:gap-4 mb-8 justify-center">
-        <span
+      <div
+        class="flex flex-wrap gap-4 mb-8 justify-center border-b border-gray-300 text-sm sm:text-base"
+      >
+        <a
+          href="#"
+          @click.prevent="selectService('')"
+          :class="[
+            'relative px-3 py-1 font-medium text-[#131629] transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-[#131629] after:transition-all',
+            selectedService === ''
+              ? 'after:w-full'
+              : 'hover:after:w-full focus:after:w-full',
+          ]"
+        >
+          Tous
+        </a>
+
+        <a
           v-for="(service, index) in uniqueServices"
           :key="index"
-          @click="selectService(service)"
+          href="#"
+          @click.prevent="selectService(service)"
           :class="[
-            'cursor-pointer px-3 sm:px-4 py-1 sm:py-2 rounded-sm font-medium text-xs sm:text-sm transition',
+            'relative px-3 py-1 font-medium text-[#131629] transition-colors after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-[#131629] after:transition-all',
             selectedService === service
-              ? 'bg-[#131629] text-white'
-              : 'bg-white/40 text-[#131629] shadow hover:bg-gray-100',
+              ? 'after:w-full'
+              : 'hover:after:w-full focus:after:w-full',
           ]"
         >
           {{ service }}
-        </span>
+        </a>
       </div>
 
       <div

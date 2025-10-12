@@ -10,7 +10,7 @@
           <div class="flex items-start">
             <div class="h-64 sm:h-24 w-[3px] bg-[#e0e5ea]"></div>
             <div class="h-[2px] w-48 bg-[#e0e5ea]"></div>
-            <div class="ml-6 -mt-3 flex flex-col">
+            <div class="ml-3 sm:ml-6 -mt-3 flex flex-col">
               <h3
                 class="uppercase titre font-light text-[#e0e5ea]/90 text-sm sm:text-base"
               >
@@ -23,7 +23,7 @@
               </h1>
 
               <p
-                class="text-sm sm:text-base text-[#e0e5ea]/90 leading-relaxed font-light mt-4 max-w-full lg:max-w-[80%]"
+                class="text-sm sm:text-base text-[#e0e5ea]/90 leading-relaxed font-light mt-4 max-w-full lg:max-w-[85%]"
                 style="text-align: justify"
               >
                 Chez Nerah Agency, nous transformons vos concepts en expériences
@@ -61,9 +61,9 @@
     </div>
 
     <div
-      class="absolute bottom-8 inset-x-0 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 z-50 gap-4 lg:gap-0"
+      class="absolute bottom-10 inset-x-0 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 gap-4 lg:gap-0"
     >
-      <div class="hidden sm:flex items-center z-50 space-x-4">
+      <div class="hidden sm:flex items-center space-x-4">
         <span class="text-[#e0e5ea] text-sm font-normal text-md text-default">
           SUIVEZ-NOUS
         </span>
@@ -74,28 +74,28 @@
           <a
             href="https://instagram.com"
             target="_blank"
-            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+            class="text-[#e0e5ea] text-2xl hover:text-[#8ac2f0] transition"
           >
             <i class="bx bxl-instagram"></i>
           </a>
           <a
             href="https://linkedin.com"
             target="_blank"
-            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+            class="text-[#e0e5ea] text-2xl hover:text-[#8ac2f0] transition"
           >
             <i class="bx bxl-linkedin"></i>
           </a>
           <a
             href="https://facebook.com"
             target="_blank"
-            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+            class="text-[#e0e5ea] text-2xl hover:text-[#8ac2f0] transition"
           >
             <i class="bx bxl-facebook"></i>
           </a>
           <a
             href="https://github.com"
             target="_blank"
-            class="text-[#e0e5ea] text-2xl hover:text-[#ffffff] transition"
+            class="text-[#e0e5ea] text-2xl hover:text-[#8ac2f0] transition"
           >
             <i class="bx bxl-github"></i>
           </a>
@@ -105,7 +105,7 @@
       <div class="flex justify-center">
         <a
           href="#services"
-          class="text-white text-3xl hover:text-[#ffffff] animate-bounce"
+          class="text-white text-3xl hover:text-[#8ac2f0] animate-bounce"
         >
           <i class="bx bx-chevron-down"></i>
         </a>
@@ -119,30 +119,76 @@
         </div>
       </div>
     </div>
+    <div
+      class="absolute top-52 left-24 w-48 h-48 bg-gradient-to-br from-[#131629] to-[#5DA9E9]/40 rounded-full blur-3xl -translate-x-20 -translate-y-20"
+    ></div>
   </section>
+  <div
+    ref="magicParticles"
+    class="absolute inset-0 pointer-events-none overflow-hidden z-50"
+  ></div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
-import lottie from "lottie-web";
 
-const animationContainer = ref(null);
+const magicParticles = ref(null);
 
-onMounted(async () => {
-  const animationData = (await import("~/utils/nerah_hero.json")).default;
+onMounted(() => {
+  const container = magicParticles.value;
+  if (!container) return;
 
-  if (!animationContainer.value) return;
+  const width = container.offsetWidth;
+  const height = container.offsetHeight;
 
-  const animation = lottie.loadAnimation({
-    container: animationContainer.value,
-    renderer: "svg",
-    loop: false,
-    autoplay: true,
-    animationData,
-  });
+  const createParticle = () => {
+    const particle = document.createElement("div");
+    particle.className = "absolute bg-white rounded-full";
+    particle.style.width = "1px";
+    particle.style.height = "1px";
+
+    particle.style.left = `${Math.random() * width}px`;
+    particle.style.top = `${Math.random() * height}px`;
+    particle.style.opacity = `${Math.random() * 0.7 + 0.3}`;
+
+    container.appendChild(particle);
+
+    const deltaX = (Math.random() - 0.5) * 200;
+    const deltaY = -50 - Math.random() * 100;
+    const duration = 5000 + Math.random() * 3000;
+
+    particle.animate(
+      [
+        { transform: "translate(0px, 0px)", opacity: particle.style.opacity },
+        { transform: `translate(${deltaX}px, ${deltaY}px)`, opacity: 0 },
+      ],
+      {
+        duration: duration,
+        easing: "ease-out",
+        iterations: 1,
+      }
+    );
+
+    setTimeout(() => particle.remove(), duration);
+  };
+
+  setInterval(() => {
+    for (let i = 0; i < 3; i++) {
+      createParticle();
+    }
+  }, 200);
 });
 </script>
 <style scoped>
+.cursor-dot {
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+
 .bg-grid {
   background-image: linear-gradient(
       to right,
