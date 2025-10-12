@@ -2,7 +2,7 @@
   <section
     class="relative min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden bg-[#131629] text-white"
   >
-    <div class="relative bg-[#131629] w-full overflow-hidden mt-16 sm:mt-0">
+    <div class="relative bg-[#131629] w-full overflow-hidden mt-12 sm:mt-0">
       <div
         class="relative z-10 container mx-auto px-8 sm:px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center"
       >
@@ -61,7 +61,7 @@
     </div>
 
     <div
-      class="absolute bottom-10 inset-x-0 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 gap-4 lg:gap-0"
+      class="absolute bottom-20 sm:bottom-10 inset-x-0 flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 gap-4 lg:gap-0"
     >
       <div class="hidden sm:flex items-center space-x-4">
         <span class="text-[#e0e5ea] text-sm font-normal text-md text-default">
