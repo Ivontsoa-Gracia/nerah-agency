@@ -17,7 +17,7 @@
                 Arts des concepts
               </h3>
               <h1
-                class="text-7xl sm:text-8xl font-bold leading-tight text-[#e0e5ea] uppercase logo-type"
+                class="text-6xl sm:text-8xl font-bold leading-tight text-[#e0e5ea] uppercase logo-type"
               >
                 Futur
               </h1>
