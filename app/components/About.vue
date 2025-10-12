@@ -35,7 +35,7 @@
               À propos de nous
             </h2>
             <p
-              class="text-sm leading-relaxed text-[#131629]"
+              class="text-sm leading-relaxed text-[#131629] texte"
               data-aos="fade-up"
               style="text-align: justify"
             >
@@ -51,7 +51,7 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 texte">
           <div
             v-for="(item, index) in propos"
             :key="index"
@@ -65,7 +65,7 @@
           >
             <h3
               :class="[
-                'text-xl sm:text-2xl font-semibold mb-12',
+                'text-2xl sm:text-2xl font-semibold mb-8',
                 index === 0 ? 'text-[#131629]' : 'text-[#e0e5ea]',
               ]"
             >
@@ -118,8 +118,7 @@ const toggle = (index) => {
 </script>
 
 <style scoped>
-.text-default {
-  color: #131629;
+.texte {
   letter-spacing: 1px;
   font-family: "Helvetica", sans-serif;
 }
