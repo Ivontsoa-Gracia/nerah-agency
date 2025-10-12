@@ -58,7 +58,7 @@
 
       <main class="flex-1 texte mt-6 lg:mt-12 lg:ml-64">
         <div v-if="selectedCategorie">
-          <h3 class="text-xl font-semibold text-[#131629] mb-6 texte">
+          <h3 class="text-xl font-semibold text-[#131629] mb-6 logo-type">
             Sous-services pour {{ selectedCategorie.categorie }}
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
