@@ -104,7 +104,7 @@
 
       <div class="flex justify-center">
         <a
-          href="#services"
+          href="#about"
           class="text-white text-3xl hover:text-[#8ac2f0] animate-bounce"
         >
           <i class="bx bx-chevron-down"></i>
