@@ -88,7 +88,7 @@ useHead({
     {
       rel: "preload",
       as: "font",
-      href: "/font/Pirulen-Regular.otf",
+      href: "/font/Pirulen-regular.otf",
       type: "font/otf",
       crossorigin: "anonymous",
     },
