@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-[#e0e5ea] text-[#131629] py-12 texte" data-aos="fade-up">
+  <footer class="bg-[#e0e5ea] text-[#131629] py-12 texte">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div
         class="flex flex-col items-center md:items-start -mt-12"

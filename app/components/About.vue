@@ -65,8 +65,8 @@
           >
             <h3
               :class="[
-                'text-3xl sm:text-2xl font-bold mb-8 tracking-wider',
-                index === 0 ? 'text-[#e0e5ea] sm:text-[#131629]' : 'text-[#e0e5ea]',
+                'text-xl sm:text-2xl font-bold mb-8 tracking-wider logo-type sm:texte',
+                index === 0 ? 'text-[#8ac2f0] sm:text-[#131629]' : 'text-[#8ac2f0] sm:text-[#e0e5ea]',
               ]"
             >
               {{ item.title }}
@@ -74,7 +74,7 @@
             <p
               :class="[
                 'text-sm leading-relaxed',
-                index === 0 ? 'text-[#e0e5ea] sm:text-[#131629]' : 'text-gray-300',
+                index === 0 ? 'text-gray-300 sm:text-[#131629]' : 'text-gray-300',
               ]"
             >
               {{ item.details }}

@@ -52,11 +52,11 @@
         </div>
       </div>
 
-      <div class="sm:hidden relative">
+      <div class="sm:hidden relative -pb-20">
         <div
           ref="slider"
-          class="flex transition-transform duration-700 ease-in-out gap-2"
-          :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
+          class="flex transition-transform duration-700 ease-in-out gap-6"
+          :style="{ transform: `translateX(-${activeIndex *100}%)` }"
         >
           <div
             v-for="(proj, index) in firstProjects"
