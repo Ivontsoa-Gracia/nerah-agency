@@ -2,13 +2,13 @@
   <section class="py-12 bg-[#e0e5ea]/60 mt-14 sm:mt-20 min-h-screen">
     <div class="max-w-7xl mx-auto px-6">
       <h1
-        class="text-3xl sm:text-3xl font-bold text-[#222831] mb-8 text-center"
+        class="text-3xl sm:text-3xl font-bold text-[#222831] mb-8 text-center logo-type"
       >
         Nos réalisations
       </h1>
 
       <div
-        class="flex flex-wrap gap-4 mb-8 justify-center border-b border-gray-300 text-sm sm:text-base"
+        class="flex flex-wrap gap-4 mb-8 justify-center border-b border-gray-300 text-sm sm:text-base texte"
       >
         <a
           href="#"
@@ -40,7 +40,7 @@
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 texte"
       >
         <div
           v-for="(proj, index) in filteredProjects"
