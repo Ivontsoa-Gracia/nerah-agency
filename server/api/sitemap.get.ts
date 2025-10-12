@@ -37,5 +37,9 @@ export default defineEventHandler((event) => {
 </urlset>`;
 
   setHeader(event, 'Content-Type', 'application/xml');
+
+  setHeader(event, 'Cache-Control', 'no-store'); 
+  setHeader(event, 'Content-Encoding', 'identity');
+  
   return sitemap;
 });
