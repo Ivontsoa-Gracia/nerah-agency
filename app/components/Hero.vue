@@ -2,7 +2,7 @@
   <section
     class="relative min-h-screen flex flex-col lg:flex-row items-center justify-center overflow-hidden bg-[#131629] text-white"
   >
-    <div class="relative bg-[#131629] w-full overflow-hidden mt-20 sm:mt-0">
+    <div class="relative bg-[#131629] w-full overflow-hidden mt-16 sm:mt-0">
       <div
         class="relative z-10 container mx-auto px-8 sm:px-6 py-16 lg:py-24 flex flex-col lg:flex-row items-center"
       >
