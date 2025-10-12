@@ -114,8 +114,8 @@ useHead({
 <style>
 @font-face {
   font-family: "Pirulen";
-  src: local("Pirulen"), url("/font/Pirulen-Regular.otf") format("opentype"),
-    url("https://fonts.cdnfonts.com/s/17951/Pirulen.woff") format("woff");
+  src: local("Pirulen"), url("/font/Pirulen-regular.otf") format("opentype"),
+    url("/font/Pirulen-regular.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
