@@ -1,5 +1,7 @@
 <template>
-  <section class="py-12 bg-[#e0e5ea]/50 min-h-screen relative overflow-hidden">
+  <section
+    class="py-12 bg-[#e0e5ea]/50 h-auto sm:min-h-screen relative overflow-hidden"
+  >
     <div class="max-w-7xl mx-auto px-6 h-full flex flex-col">
       <div
         class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4 sm:gap-0"
@@ -52,23 +54,28 @@
         </div>
       </div>
 
-      <div class="sm:hidden relative -pb-20">
+      <div class="sm:hidden relative">
         <div
           ref="slider"
-          class="flex transition-transform duration-700 ease-in-out gap-6"
-          :style="{ transform: `translateX(-${activeIndex *100}%)` }"
+          class="flex transition-transform duration-700 ease-in-out gap-4"
+          :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
         >
           <div
             v-for="(proj, index) in firstProjects"
             :key="index"
-            class="min-w-full h-64 relative overflow-hidden rounded-sn shadow-md"
+            class="flex-shrink-0 h-64 relative overflow-hidden rounded-sm shadow-md"
+            :style="{ width: `calc(100% - 1rem)` }"
           >
-            <img :src="proj.image" alt="" class="w-full h-full object-cover" />
+            <img
+              :src="proj.image"
+              alt=""
+              class="w-full h-full object-cover rounded-sm"
+            />
             <div
-              class="absolute inset-0 bg-[#131629]/60 flex flex-col justify-end p-4"
+              class="absolute inset-0 bg-[#131629]/50 flex flex-col justify-end p-4"
             >
               <h3 class="text-white font-bold logo-type">{{ proj.titre }}</h3>
-              <p class="text-gray-200 text-sm texte">{{ proj.service }}</p>
+              <p class="text-gray-200 text-sm">{{ proj.service }}</p>
             </div>
           </div>
         </div>
