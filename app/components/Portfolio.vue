@@ -1,13 +1,14 @@
 <template>
-  <section class="py-12 bg-[#e0e5ea]/70 min-h-screen">
+  <section class="py-12 bg-[#e0e5ea]/50 min-h-screen">
     <div class="max-w-7xl mx-auto px-6 h-full flex flex-col">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4 sm:gap-0">
-        <h2 class="text-3xl sm:text-4xl font-bold text-[#131629] logo-type">
-          Portfolio
+        <h2 class="text-3xl sm:text-4xl font-bold text-[#131629] logo-type" data-aos="fade-up">
+          Nos réalisations
         </h2>
         <button
           @click="goToPortfolio"
           class="px-6 py-2 text-[#131629] texte transition flex items-center gap-2 hover:underline"
+          data-aos="fade-up"
         >
           Voir plus de projets
           <i class="bx bx-right-arrow-alt text-lg"></i>
@@ -16,29 +17,27 @@
 
       <div class="grid gap-4 h-full">
 
-        <!-- Première ligne -->
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
-          <div class="col-span-12 sm:col-span-5 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md">
+          <div class="col-span-12 sm:col-span-5 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md" data-aos="fade-up">
             <img :src="firstProjects[0].image" alt="" class="w-full h-full object-cover" />
             <Overlay :proj="firstProjects[0]" />
           </div>
-          <div class="col-span-12 sm:col-span-3 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md">
+          <div class="col-span-12 sm:col-span-3 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md" data-aos="fade-up">
             <img :src="firstProjects[1].image" alt="" class="w-full h-full object-cover" />
             <Overlay :proj="firstProjects[1]" />
           </div>
-          <div class="col-span-12 sm:col-span-4 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md">
+          <div class="col-span-12 sm:col-span-4 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md" data-aos="fade-up">
             <img :src="firstProjects[2].image" alt="" class="w-full h-full object-cover" />
             <Overlay :proj="firstProjects[2]" />
           </div>
         </div>
 
-        <!-- Deuxième ligne -->
         <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
-          <div class="col-span-12 sm:col-span-4 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md">
+          <div class="col-span-12 sm:col-span-4 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md" data-aos="fade-up">
             <img :src="firstProjects[3].image" alt="" class="w-full h-full object-cover" />
             <Overlay :proj="firstProjects[3]" />
           </div>
-          <div class="col-span-12 sm:col-span-8 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md">
+          <div class="col-span-12 sm:col-span-8 h-60 sm:h-80 relative overflow-hidden rounded-sm shadow-md" data-aos="fade-up">
             <img :src="firstProjects[4].image" alt="" class="w-full h-full object-cover" />
             <Overlay :proj="firstProjects[4]" />
           </div>

@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col bg-white/5 backdrop-blur-md py-4 px-6 rounded-sm space-y-1">
-      <div class="flex items-start">
+    <div class="flex flex-col bg-white/5 backdrop-blur-md py-4 px-6 rounded-sm space-y-1" data-aos="fade-up">
+      <div class="flex items-start" data-aos="fade-up">
         <div class="text-secondary text-2xl mr-4 mt-1">
           <i :class="icon"></i>
         </div>

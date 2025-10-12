@@ -33,43 +33,62 @@
     </div>
 
     <transition name="slide-right">
-      <div
-        v-if="isOpen"
-        class="fixed top-0 right-0 h-screen w-[200px] bg-[#131629]/95 backdrop-blur-xl border-l border-[#e0e5ea]/10 shadow-lg z-50 animate-slide-right"
-      >
-        <div
-          class="flex flex-col justify-center items-start h-full space-y-8 px-6 text-[#e0e5ea] text-lg tracking-wider"
+    <div
+      v-if="isOpen"
+      class="fixed top-0 right-0 h-screen w-[220px] bg-[#131629]/95 backdrop-blur-xl border-l border-[#e0e5ea]/10 shadow-lg z-50 animate-slide-right"
+    >
+      <div class="flex flex-col justify-center items-start h-full space-y-6 px-6">
+        <!-- Menu items avec icône -->
+        <button
+          @click="goToHome"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
         >
-          <button @click="goToHome" class="hover:text-[#e0e5ea]/70 transition">
-            Acceuil
-          </button>
-          <button
-            @click="goToServices"
-            class="hover:text-[#e0e5ea]/70 transition"
-          >
-            Services
-          </button>
-          <button
-            @click="goToPortfolios"
-            class="hover:text-[#e0e5ea]/70 transition"
-          >
-            Portfolio
-          </button>
-          <a href="#about" class="hover:text-[#e0e5ea]/70 transition"
-            >À propos</a
-          >
-          <a href="#contact" class="hover:text-[#e0e5ea]/70 transition"
-            >Contact</a
-          >
-          <button
-            @click="restart"
-            class="hover:text-[#e0e5ea]/70 transition"
-          >
-            Redemarer
-          </button>
-        </div>
+          <i class="bx bx-home-alt text-xl"></i>
+          Accueil
+        </button>
+
+        <button
+          @click="goToServices"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-briefcase-alt-2 text-xl"></i>
+          Services
+        </button>
+
+        <button
+          @click="goToPortfolios"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-image text-xl"></i>
+          Réalisations
+        </button>
+
+        <a
+          href="#about"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-user text-xl"></i>
+          À propos
+        </a>
+
+        <a
+          href="#contact"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-envelope text-xl"></i>
+          Contact
+        </a>
+
+        <button
+          @click="restart"
+          class="flex items-center gap-3 text-[#e0e5ea] text-lg font-medium hover:text-[#8ac2f0] transition-all duration-300"
+        >
+          <i class="bx bx-refresh text-xl"></i>
+          Redémarrer
+        </button>
       </div>
-    </transition>
+    </div>
+  </transition>
   </nav>
 </template>
 
