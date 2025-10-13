@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'fr'
+      },
       meta: [
         { name: 'google-site-verification', content: '8aBEGykV_15nMpqshHPhNY74v1wwCFASnDGRDduB8rg' }
       ]
