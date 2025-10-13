@@ -5,7 +5,14 @@
         class="flex flex-col items-center md:items-start -mt-12"
         data-aos="fade-up"
       >
-        <img src="/logo.png" alt="Nerah Agency" class="h-64 w-auto" />
+
+      <picture>
+            <source :srcset="images.logo" type="image/webp" />
+            <img
+            src="/logo.png" alt="Nerah Agency" class="h-64 w-auto"  loading="lazy"
+            />
+            </picture>
+       
       </div>
 
       <div
