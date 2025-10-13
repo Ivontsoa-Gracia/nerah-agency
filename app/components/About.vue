@@ -20,11 +20,17 @@
             class="w-full h-[200px] rounded-sm overflow-hidden"
             data-aos="fade-up"
           >
+            
+            <picture>
+            <source :srcset="images.about" type="image/webp" />
             <img
               src="/img/about.jpg"
               alt="Nerah Agency"
               class="w-full h-full object-cover"
+              loading="lazy"
             />
+            </picture>
+
           </div>
 
           <div class="flex flex-col justify-center px-2 sm:px-4">
@@ -88,6 +94,7 @@
 
 <script setup>
 import { ref } from "vue";
+import { images } from "~/utils/images";
 
 const propos = [
   {

@@ -43,7 +43,15 @@
             alt="Hero"
             class="w-full h-full object-cover"
           />
-
+          <picture>
+            <source :srcset="images.hero" type="image/webp" />
+            <img
+              src="/img/hero_1.jpg"
+              alt="Nerah Agency"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            </picture>
           <div
             class="absolute inset-0"
             style="
