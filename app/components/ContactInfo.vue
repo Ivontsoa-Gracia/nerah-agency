@@ -4,7 +4,7 @@
     data-aos="fade-up"
   >
     <div class="flex items-start">
-      <div class="text-secondary text-2xl mr-4 mt-1">
+      <div class="text-secondary text-2xl mr-4 mt-1 font-light">
         <i :class="icon"></i>
       </div>
       <div>

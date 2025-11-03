@@ -47,8 +47,13 @@
           :key="index"
           class="relative bg-white/10 backdrop-blur-md rounded-sm shadow-sm cursor-pointer overflow-hidden transition transform hover:scale-105 group"
         >
-          <img
+          <!-- <img
             :src="proj.image"
+            :alt="proj.titre"
+            class="w-full h-48 sm:h-56 md:h-64 object-cover"
+          /> -->
+          <img
+            :src="proj.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')"
             :alt="proj.titre"
             class="w-full h-48 sm:h-56 md:h-64 object-cover"
           />
@@ -56,7 +61,9 @@
           <div
             class="absolute inset-0 bg-[#131629]/90 flex flex-col justify-center items-center p-4 text-center transform scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500 ease-in-out"
           >
-            <h3 class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 logo-type">
+            <h3
+              class="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2 logo-type"
+            >
               {{ proj.titre }}
             </h3>
             <p class="text-gray-200 text-xs sm:text-sm texte">
