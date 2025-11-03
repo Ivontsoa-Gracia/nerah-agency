@@ -5,14 +5,15 @@
         class="flex flex-col items-center md:items-start -mt-12"
         data-aos="fade-up"
       >
-
-      <picture>
-            <source :srcset="images.logo" type="image/webp" />
-            <img
-            src="/logo.png" alt="Nerah Agency" class="h-64 w-auto"  loading="lazy"
-            />
-            </picture>
-       
+        <picture>
+          <source :srcset="images.logo" type="image/webp" />
+          <img
+            src="/logo.png"
+            alt="Nerah Agency"
+            class="h-64 w-auto"
+            loading="lazy"
+          />
+        </picture>
       </div>
 
       <div
@@ -115,9 +116,7 @@
       </div>
     </div>
 
-    <div
-      class="mt-12 text-center text-[#131629]/80 text-sm px-12 sm:p-1"
-    >
+    <div class="mt-12 text-center text-[#131629]/80 text-sm px-12 sm:p-1">
       &copy; 2025 Nerah Agency. Tous droits réservés.
     </div>
   </footer>

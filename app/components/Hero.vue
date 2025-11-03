@@ -51,7 +51,7 @@
               class="w-full h-full object-cover"
               loading="lazy"
             />
-            </picture>
+          </picture>
           <div
             class="absolute inset-0"
             style="

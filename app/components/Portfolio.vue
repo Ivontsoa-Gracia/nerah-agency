@@ -14,11 +14,17 @@
         </h2>
         <button
           @click="goToPortfolio"
-          class="text-[#131629] texte transition flex items-center gap-2 hover:underline"
+          class="relative text-[#131629] transition flex items-center gap-2 group"
           data-aos="fade-up"
         >
-          Voir plus de projets
-          <i class="bx bx-right-arrow-alt text-lg"></i>
+          <span
+            class="relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-[#131629] after:transition-all after:duration-300 group-hover:after:w-full"
+          >
+            Voir plus de projets
+          </span>
+          <i
+            class="bx bx-right-arrow-alt text-lg transition-transform duration-300 group-hover:translate-x-1"
+          ></i>
         </button>
       </div>
 
@@ -66,11 +72,17 @@
             class="flex-shrink-0 h-64 relative overflow-hidden rounded-sm shadow-md"
             :style="{ width: `calc(100% - 1rem)` }"
           >
-            <img
+            <!-- <img
               :src="proj.image"
               alt=""
               class="w-full h-full object-cover rounded-sm"
+            /> -->
+            <img
+              :src="proj.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')"
+              alt=""
+              class="w-full h-full object-cover"
             />
+
             <div
               class="absolute inset-0 bg-[#131629]/50 flex flex-col justify-end p-4"
             >

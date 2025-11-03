@@ -92,17 +92,17 @@
             </h3>
             <div class="space-y-6 texte">
               <ContactInfo
-                icon="fas fa-headset"
+                icon="bxr  bx-headphone-mic"
                 title="Support client"
-                :texts="['+261 34 77 650 78', '+261 32 35 495 94']"
+                :texts="['+261 34 77 659 78', '+261 32 35 495 94']"
               />
               <ContactInfo
-                icon="far fa-comment-dots"
+                icon="bxr  bx-message-dots"
                 title="SMS / Whatsapp"
-                :texts="['+261 34 77 650 78', '+261 32 35 495 94']"
+                :texts="['+261 34 77 659 78', '+261 32 35 495 94']"
               />
               <ContactInfo
-                icon="far fa-envelope"
+                icon="bxr  bx-at"
                 title="Email"
                 :texts="['contact@nerahagency.com', 'nerahagency@gmail.com']"
               />

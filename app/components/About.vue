@@ -20,17 +20,15 @@
             class="w-full h-[200px] rounded-sm overflow-hidden"
             data-aos="fade-up"
           >
-            
             <picture>
-            <source :srcset="images.about" type="image/webp" />
-            <img
-              src="/img/about.jpg"
-              alt="Nerah Agency"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+              <source :srcset="images.about" type="image/webp" />
+              <img
+                src="/img/about.jpg"
+                alt="Nerah Agency"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
             </picture>
-
           </div>
 
           <div class="flex flex-col justify-center px-2 sm:px-4">
@@ -72,7 +70,9 @@
             <h3
               :class="[
                 'text-xl sm:text-2xl font-bold mb-8 tracking-wider logo-type sm:texte',
-                index === 0 ? 'text-[#8ac2f0] sm:text-[#131629]' : 'text-[#8ac2f0] sm:text-[#e0e5ea]',
+                index === 0
+                  ? 'text-[#8ac2f0] sm:text-[#131629]'
+                  : 'text-[#8ac2f0] sm:text-[#e0e5ea]',
               ]"
             >
               {{ item.title }}
@@ -80,7 +80,9 @@
             <p
               :class="[
                 'text-sm leading-relaxed',
-                index === 0 ? 'text-gray-300 sm:text-[#131629]' : 'text-gray-300',
+                index === 0
+                  ? 'text-gray-300 sm:text-[#131629]'
+                  : 'text-gray-300',
               ]"
             >
               {{ item.details }}

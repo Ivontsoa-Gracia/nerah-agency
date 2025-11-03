@@ -44,23 +44,22 @@
             @click="goToHome"
             class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
           >
-            <i class="bx bx-home-alt text-xl"></i>
+            <i class="bxr bx-home-alt-2 text-xl"></i>
             Accueil
           </button>
 
-          <a
-            href="#about"
+          <button
+            @click="goToAbout"
             class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
           >
-            <i class="bx bx-user text-xl"></i>
+            <i class="bxr bx-book-bookmark text-xl"></i>
             À propos
-          </a>
-
+          </button>
           <button
             @click="goToServices"
             class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
           >
-            <i class="bx bx-briefcase-alt-2 text-xl"></i>
+            <i class="bxr bx-briefcase-alt-2 text-xl"></i>
             Services
           </button>
 
@@ -68,23 +67,23 @@
             @click="goToPortfolios"
             class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
           >
-            <i class="bx bx-image text-xl"></i>
+            <i class="bxr bx-images text-xl"></i>
             Réalisations
           </button>
 
-          <a
-            href="#contact"
+          <button
+            @click="goToContact"
             class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
           >
-            <i class="bx bx-envelope text-xl"></i>
+            <i class="bxr bx-phone-book text-xl"></i>
             Contact
-          </a>
+          </button>
 
           <button
             @click="restart"
-            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300"
+            class="flex items-center gap-3 text-[#e0e5ea] text-lg font-normal hover:text-[#8ac2f0] transition-all duration-300 hidden"
           >
-            <i class="bx bx-refresh text-xl"></i>
+            <i class="bxr bx-refresh-cw-alt"></i>
             Redémarrer
           </button>
         </div>
@@ -95,26 +94,22 @@
 
 <script setup>
 import { ref } from "vue";
+import { navigateTo } from "#app";
+
 const isOpen = ref(false);
 const toggleMenu = () => (isOpen.value = !isOpen.value);
 
-import { navigateTo } from "#app";
-
-const goToServices = () => {
-  navigateTo("/services");
+const navigateAndClose = (path) => {
+  isOpen.value = false;
+  navigateTo(path);
 };
 
-const goToHome = () => {
-  navigateTo("/main");
-};
-
-const goToPortfolios = () => {
-  navigateTo("/portfolio");
-};
-
-const restart = () => {
-  navigateTo("/");
-};
+const goToHome = () => navigateAndClose("/main");
+const goToAbout = () => navigateAndClose("/main#about");
+const goToServices = () => navigateAndClose("/services");
+const goToPortfolios = () => navigateAndClose("/portfolio");
+const goToContact = () => navigateAndClose("/main#contact");
+const restart = () => navigateAndClose("/");
 </script>
 
 <style scoped>
